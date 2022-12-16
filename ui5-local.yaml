@@ -27,6 +27,17 @@ server:
         debug: true
         transpileAsync: true
         transpileTypeScript: true
+        babelConfig: 
+          presets: [
+            "@babel/preset-env",
+            [
+                "transform-ui5",
+                {
+                    "addControllerStaticPropsToExtend": true
+                }
+            ],
+            "@babel/preset-typescript"
+        ]
     - name: fiori-tools-proxy
       afterMiddleware: compression
       configuration:
