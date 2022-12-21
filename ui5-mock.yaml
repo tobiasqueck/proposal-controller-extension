@@ -27,7 +27,6 @@ server:
     - name: ui5-tooling-transpile-middleware
       afterMiddleware: compression
       configuration:
-        debug: true
         transpileAsync: true
         transpileTypeScript: true
     - name: sap-fe-mockserver
@@ -45,7 +44,6 @@ builder:
     - name: ui5-tooling-transpile-task
       afterTask: replaceVersion
       configuration:
-        debug: true
         removeConsoleStatements: true
         transpileAsync: true
         transpileTypeScript: true

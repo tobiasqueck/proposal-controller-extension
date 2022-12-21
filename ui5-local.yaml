@@ -24,20 +24,8 @@ server:
     - name: ui5-tooling-transpile-middleware
       afterMiddleware: compression
       configuration:
-        debug: true
         transpileAsync: true
         transpileTypeScript: true
-        babelConfig: 
-          presets: [
-            "@babel/preset-env",
-            [
-                "transform-ui5",
-                {
-                    "addControllerStaticPropsToExtend": true
-                }
-            ],
-            "@babel/preset-typescript"
-        ]
     - name: fiori-tools-proxy
       afterMiddleware: compression
       configuration:
@@ -65,7 +53,6 @@ builder:
     - name: ui5-tooling-transpile-task
       afterTask: replaceVersion
       configuration:
-        debug: true
         removeConsoleStatements: true
         transpileAsync: true
         transpileTypeScript: true

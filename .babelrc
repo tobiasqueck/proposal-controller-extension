@@ -1,0 +1,12 @@
+{
+    "presets": [
+        "@babel/preset-env",
+        [
+            "transform-ui5",
+            {
+                "addControllerStaticPropsToExtend": true
+            }
+        ],
+        "@babel/preset-typescript"
+    ]
+}
